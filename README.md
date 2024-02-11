@@ -3,7 +3,7 @@
 ## Installation Directions
 
 1. **Download Datasets:**
-   - Download the academic datasets from kaggle (https://www.kaggle.com/datasets/webdevbadger/international-student-demographics?select=academic.csv) 
+   - Download the international-student-demographics datasets from kaggle (https://www.kaggle.com/datasets/webdevbadger/international-student-demographics?select=academic.csv) 
    - Ensure you have the following datasets: `academic_detail_modified.csv`, `academic_modified.csv`, `field_of_study_modified.csv`, `origin_modified.csv`, `source_of_fund_modified.csv`, and `status_modified.csv`.
 
 2. **Create Database:**
