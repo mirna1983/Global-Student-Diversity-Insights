@@ -13,30 +13,59 @@ Welcome to the "Global Student Diversity Insights" project repository. This proj
 - [Project Introduction](#project-introduction)
 - [Data Analysis](#data-analysis)
 - [Hypothesis Testing](#hypothesis-testing)
+- [Deployment](#deployment)
 
 ## Installation Directions
 
-1. **Download Datasets:**
-   - Download the international-student-demographics datasets from Kaggle [here](https://www.kaggle.com/datasets/webdevbadger/international-student-demographics?select=academic.csv).
-   - Ensure you have the following datasets: `academic_detail_modified.csv`, `academic_modified.csv`, `field_of_study_modified.csv`, `origin_modified.csv`, `source_of_fund_modified.csv`, and `status_modified.csv`.
+1. **Clone the Repository:**
 
-2. **Create Database:**
-   - In your SQL environment, create a database named `Global_Student_Diversity_Insights`.
+   Clone this repository to your local machine.
 
-```sql
--- Example SQL commands for creating the database
-CREATE DATABASE Global_Student_Diversity_Insights;
-USE Global_Student_Diversity_Insights;
-```
+   ```bash
+   gh repo clone mirna1983/Global-Student-Diversity-Insights
+   cd Global-Student-Diversity-Insights
+   ```
 
-3. **Load Datasets:**
-   - Load the datasets into the database tables with corresponding names:
+2. **Download Datasets:**
 
-```bash
-# Example commands for loading datasets into SQL tables
-sqlcmd -S localhost -d Global_Student_Diversity_Insights -U your_username -P your_password -Q "BULK INSERT academic_detail_modified FROM 'academic_detail_modified.csv' WITH(FIELDTERMINATOR = ',', ROWTERMINATOR = '\n', FIRSTROW = 2)"
-# Repeat for other tables
-```
+   Download the international-student-demographics datasets from Kaggle [here](https://www.kaggle.com/datasets/webdevbadger/international-student-demographics?select=academic.csv).
+
+   Ensure you have the following datasets: `academic_detail_modified.csv`, `academic_modified.csv`, `field_of_study_modified.csv`, `origin_modified.csv`, `source_of_fund_modified.csv`, and `status_modified.csv`.
+
+3. **Create Database:**
+
+   In your SQL environment, create a database named `Global_Student_Diversity_Insights`.
+
+   ```sql
+   CREATE DATABASE Global_Student_Diversity_Insights;
+   USE Global_Student_Diversity_Insights;
+   ```
+
+4. **Load Datasets:**
+
+   Load the datasets into the database tables with corresponding names.
+
+   ```bash
+   sqlcmd -S localhost -d Global_Student_Diversity_Insights -U your_username -P your_password -Q "BULK INSERT academic_detail_modified FROM 'academic_detail_modified.csv' WITH(FIELDTERMINATOR = ',', ROWTERMINATOR = '\n', FIRSTROW = 2)"
+   # Repeat for other tables
+   ```
+
+5. **Update Project.ipynb:**
+
+   Make changes to `Project.ipynb` as needed.
+
+   ```bash
+   git add Project.ipynb
+   git commit -m "Updated Project.ipynb with XYZ changes"
+   ```
+
+6. **Push Changes to GitHub:**
+
+   Push the changes to the GitHub repository.
+
+   ```bash
+   git push
+   ```
 
 ## Contributors
 
@@ -61,7 +90,7 @@ The goal of the "Global Student Diversity Insights" project is to analyze and un
 
 ## Data Analysis
 
-The data analysis process involves exploring, cleaning, and transforming the datasets.
+The data analysis process involves exploring, cleaning, and transforming the datasets. Refer to the `data_exploration.ipynb` notebook for detailed steps.
 
 ## Hypothesis Testing
 
@@ -90,12 +119,3 @@ If there are any manual processes involved in the deployment process, document t
   git push
   ```
 
-### Infrastructure as Code (Optional)
-
-If you want to set up infrastructure as code (IaC), refer to the `terraform` directory for the Terraform scripts. Adjust the variables in `main.tf` and run:
-
-```bash
-cd terraform
-terraform init
-terraform apply
-```
