@@ -69,7 +69,7 @@ Welcome to the "Global Student Diversity Insights" project repository. This proj
 
 ## Contributors
 
-Contributors to the "Global Student Diversity Insights" project include Mirna Philip, Parisa Kamizi, and Arya Shahbaz.
+Contributors to the "Global Student Diversity Insights" project include Mirna Philip, Parisa Kamizi, and Arya Shahbazi.
 
 ## Methods Used
 
