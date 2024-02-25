@@ -118,4 +118,34 @@ If there are any manual processes involved in the deployment process, document t
   ```bash
   git push
   ```
+## **Three key monitoring aspects for our Global Student Diversity Insights project:**
 
+### 1. **Logging and Alerting:**
+
+   - **Implementation:**
+     - Integrate logging in Python for pipeline steps.
+     - Set up alerts for critical points.
+
+   - **Monitoring:**
+     - Log start/end times, successful data loading, and errors.
+     - Use tools like Prometheus, Grafana, or ELK Stack.
+
+### 2. **Data Quality Monitoring:**
+
+   - **Implementation:**
+     - Set up data quality checks using Great Expectations or Python scripts.
+     - Define thresholds for completeness and correctness.
+
+   - **Monitoring:**
+     - Check for missing values, anomalies, and data type consistency.
+     - Monitor with tools or custom scripts over time.
+
+### 3. **Performance and Scalability:**
+
+   - **Implementation:**
+     - Log pipeline execution times and resource usage.
+     - Optimize for scalability with efficient queries and transformations.
+
+   - **Monitoring:**
+     - Track execution times, resource utilization, and system performance.
+     - Ensure scalability using load testing and horizontal scaling strategies.
